@@ -1,21 +1,15 @@
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <ul>
-      <li>
-        <button type={options.type} onClick={onLeaveFeedback}>
-          Good
-        </button>
-      </li>
-      <li>
-        <button type={options.type} onClick={onLeaveFeedback}>
-          Neutral
-        </button>
-      </li>
-      <li>
-        <button type={options.type} onClick={onLeaveFeedback}>
-          Bad
-        </button>
-      </li>
+      {Object.keys(options).map(btnName => {
+        return (
+          <li key={btnName}>
+            <button type="button" onClick={onLeaveFeedback}>
+              {btnName}
+            </button>
+          </li>
+        );
+      })}
     </ul>
   );
 };

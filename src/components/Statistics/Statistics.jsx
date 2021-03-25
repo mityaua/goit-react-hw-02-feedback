@@ -3,9 +3,7 @@ import Notification from '../Notification';
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <div>
-      <h2>Statisctics</h2>
-
-      {/* Нужно вынести */}
+      {/* Нужно вынести? */}
       {!!total() ? (
         <ul>
           <li>Good: {good}</li>
