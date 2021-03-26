@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import Notification from '../Notification';
 
@@ -43,6 +44,14 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       )}
     </div>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.func.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
 };
 
 export default Statistics;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -53,6 +54,11 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       })}
     </ul>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.object.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;

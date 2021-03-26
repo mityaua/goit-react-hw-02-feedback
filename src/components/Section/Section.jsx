@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -19,6 +20,16 @@ const Section = ({ title, children }) => {
       {children}
     </section>
   );
+};
+
+Section.defaultProps = {
+  title: '',
+  children: [],
+};
+
+Section.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Section;
