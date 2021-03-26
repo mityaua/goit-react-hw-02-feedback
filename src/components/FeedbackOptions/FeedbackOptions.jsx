@@ -28,7 +28,7 @@ const useStyles = createUseStyles({
 
     '&:hover, &:focus': {
       backgroundColor: '#d8d3d3',
-      color: 'white',
+      color: '#6b6b6b',
       transition: 'all 250ms linear',
     },
   },
