@@ -4,16 +4,14 @@ import FeedbackOptions from './components/FeedbackOptions';
 import Statistics from './components/Statistics';
 
 class App extends Component {
-  // Заменяет конструктор через Babel
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
 
-  // Метод, использующий предыдущее состояние стейта (повесили на кнопки)
   onLeaveFeedback = event => {
-    const label = event.target.textContent; // toLowerCase() выкинул
+    const label = event.target.textContent;
 
     this.setState(prevState => ({ [label]: (prevState[label] += 1) }));
   };
@@ -31,10 +29,6 @@ class App extends Component {
     const percent = Math.round(
       (this.state.good * 100) / this.countTotalFeedback(),
     );
-
-    // if (!percent) {
-    //   return 0;
-    // } тоже выкинул (чтобы не делить на ноль...)
 
     return percent;
   };
