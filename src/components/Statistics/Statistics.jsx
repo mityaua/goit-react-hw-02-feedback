@@ -12,20 +12,30 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       {!!totalFeedback ? (
         <ul>
           <li className={styles.item}>
-            Good: <span className={styles.value}>{good}</span>
+            <p>
+              Good: <span className={styles.value}>{good}</span>
+            </p>
           </li>
           <li className={styles.item}>
-            Neutral: <span className={styles.value}>{neutral}</span>
+            <p>
+              Neutral: <span className={styles.value}>{neutral}</span>
+            </p>
           </li>
           <li className={styles.item}>
-            Bad: <span className={styles.value}>{bad}</span>
+            <p>
+              Bad: <span className={styles.value}>{bad}</span>
+            </p>
           </li>
           <li className={styles.item}>
-            Total: <span className={styles.value}>{totalFeedback}</span>
+            <p>
+              Total: <span className={styles.value}>{totalFeedback}</span>
+            </p>
           </li>
           <li className={styles.item}>
-            Positive feedback:{' '}
-            <span className={styles.value}>{positiveValue}%</span>
+            <p>
+              Positive feedback:{' '}
+              <span className={styles.value}>{positiveValue}%</span>
+            </p>
           </li>
         </ul>
       ) : (
