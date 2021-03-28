@@ -35,14 +35,14 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
-        <Section title="Statisctics">
+        <Section title="Statistics">
           <Statistics
             good={this.state.good}
             neutral={this.state.neutral}
@@ -51,7 +51,7 @@ class App extends Component {
             positivePercentage={this.countPositiveFeedbackPercentage}
           />
         </Section>
-      </>
+      </div>
     );
   }
 }

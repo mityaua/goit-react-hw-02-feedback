@@ -1,22 +1,11 @@
 import PropTypes from 'prop-types';
-import { createUseStyles } from 'react-jss';
 
-const useStyles = createUseStyles({
-  section: {
-    padding: '15px',
-    textAlign: 'center',
-  },
-  title: {
-    marginBottom: '15px',
-  },
-});
+import styles from './Section.module.scss';
 
 const Section = ({ title, children }) => {
-  const classes = useStyles();
-
   return (
-    <section className={classes.section}>
-      <h1 className={classes.title}>{title}</h1>
+    <section className={styles.section}>
+      <h1 className={styles.title}>{title}</h1>
       {children}
     </section>
   );
